@@ -1,0 +1,527 @@
+openapi: 3.1.0
+info:
+  title: Api
+  version: 0.1.0
+  description: SmartKisan AI - Agriculture Advisory API
+servers:
+  - url: /api
+    description: Base API path
+tags:
+  - name: health
+    description: Health operations
+  - name: crop
+    description: Crop prediction operations
+  - name: advisor
+    description: AI farming advisor operations
+  - name: weather
+    description: Weather information
+  - name: news
+    description: Farming news and schemes
+  - name: soil
+    description: Soil analysis operations
+
+paths:
+  /healthz:
+    get:
+      operationId: healthCheck
+      tags: [health]
+      summary: Health check
+      responses:
+        "200":
+          description: Healthy
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthStatus"
+
+  /predict:
+    post:
+      operationId: predictCrop
+      tags: [crop]
+      summary: Predict recommended crop based on soil and weather data
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SoilData"
+      responses:
+        "200":
+          description: Crop prediction result
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CropPrediction"
+
+  /ask:
+    post:
+      operationId: askAdvisor
+      tags: [advisor]
+      summary: Ask the AI farming advisor a question
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AdvisorQuery"
+      responses:
+        "200":
+          description: AI advisor response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AdvisorResponse"
+
+  /weather:
+    get:
+      operationId: getWeather
+      tags: [weather]
+      summary: Get current and forecast weather data
+      parameters:
+        - name: lat
+          in: query
+          schema:
+            type: number
+        - name: lon
+          in: query
+          schema:
+            type: number
+        - name: location
+          in: query
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Weather data
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WeatherData"
+
+  /news:
+    get:
+      operationId: getNews
+      tags: [news]
+      summary: Get latest farming news and government schemes
+      parameters:
+        - name: category
+          in: query
+          schema:
+            type: string
+            enum: [all, schemes, weather, market, pest]
+          description: News category filter
+        - name: language
+          in: query
+          schema:
+            type: string
+      responses:
+        "200":
+          description: News and scheme alerts
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/NewsResponse"
+
+  /soil/region:
+    get:
+      operationId: getSoilByRegion
+      tags: [soil]
+      summary: Get average soil parameters for a region
+      parameters:
+        - name: region
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: state
+          in: query
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Regional soil data
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RegionalSoilData"
+
+  /crop/calendar:
+    get:
+      operationId: getCropCalendar
+      tags: [crop]
+      summary: Get crop calendar and seasonal recommendations
+      parameters:
+        - name: region
+          in: query
+          schema:
+            type: string
+        - name: season
+          in: query
+          schema:
+            type: string
+            enum: [kharif, rabi, zaid]
+      responses:
+        "200":
+          description: Crop calendar data
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CropCalendar"
+
+  /crop/details:
+    get:
+      operationId: getCropDetails
+      tags: [crop]
+      summary: Get detailed information about a specific crop
+      parameters:
+        - name: crop
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Crop details
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CropDetails"
+
+components:
+  schemas:
+    HealthStatus:
+      type: object
+      properties:
+        status:
+          type: string
+      required:
+        - status
+
+    SoilData:
+      type: object
+      properties:
+        N:
+          type: number
+          description: Nitrogen content (kg/ha)
+        P:
+          type: number
+          description: Phosphorus content (kg/ha)
+        K:
+          type: number
+          description: Potassium content (kg/ha)
+        temperature:
+          type: number
+          description: Temperature in Celsius
+        humidity:
+          type: number
+          description: Humidity percentage
+        ph:
+          type: number
+          description: pH value
+        rainfall:
+          type: number
+          description: Rainfall in mm
+        region:
+          type: string
+          description: Optional region name
+      required:
+        - N
+        - P
+        - K
+        - temperature
+        - humidity
+        - ph
+        - rainfall
+
+    CropPrediction:
+      type: object
+      properties:
+        crop:
+          type: string
+        confidence:
+          type: number
+        alternativeCrops:
+          type: array
+          items:
+            type: string
+        season:
+          type: string
+        estimatedYield:
+          type: string
+      required:
+        - crop
+        - confidence
+        - alternativeCrops
+        - season
+
+    AdvisorQuery:
+      type: object
+      properties:
+        query:
+          type: string
+          description: The farmer's question
+        context:
+          type: object
+          properties:
+            location:
+              type: string
+            crop:
+              type: string
+            season:
+              type: string
+            language:
+              type: string
+              description: ISO language code (hi, mr, te, ta, kn, gu, pa, en)
+        conversationHistory:
+          type: array
+          items:
+            type: object
+            properties:
+              role:
+                type: string
+              content:
+                type: string
+            required:
+              - role
+              - content
+      required:
+        - query
+
+    AdvisorResponse:
+      type: object
+      properties:
+        answer:
+          type: string
+        language:
+          type: string
+        suggestions:
+          type: array
+          items:
+            type: string
+        relatedTopics:
+          type: array
+          items:
+            type: string
+        voiceText:
+          type: string
+          description: Text optimized for text-to-speech
+      required:
+        - answer
+        - language
+
+    WeatherData:
+      type: object
+      properties:
+        location:
+          type: string
+        temperature:
+          type: number
+        humidity:
+          type: number
+        windspeed:
+          type: number
+        precipitation:
+          type: number
+        weatherCode:
+          type: number
+        description:
+          type: string
+        forecast:
+          type: array
+          items:
+            $ref: "#/components/schemas/ForecastDay"
+        farmingAdvice:
+          type: string
+      required:
+        - temperature
+        - humidity
+        - description
+
+    ForecastDay:
+      type: object
+      properties:
+        date:
+          type: string
+        maxTemp:
+          type: number
+        minTemp:
+          type: number
+        precipitation:
+          type: number
+        description:
+          type: string
+      required:
+        - date
+        - maxTemp
+        - minTemp
+        - precipitation
+        - description
+
+    NewsItem:
+      type: object
+      properties:
+        id:
+          type: string
+        title:
+          type: string
+        summary:
+          type: string
+        category:
+          type: string
+        source:
+          type: string
+        sourceUrl:
+          type: string
+        publishedAt:
+          type: string
+        isScheme:
+          type: boolean
+      required:
+        - id
+        - title
+        - summary
+        - category
+        - source
+        - sourceUrl
+        - publishedAt
+
+    NewsResponse:
+      type: object
+      properties:
+        items:
+          type: array
+          items:
+            $ref: "#/components/schemas/NewsItem"
+        total:
+          type: number
+      required:
+        - items
+        - total
+
+    RegionalSoilData:
+      type: object
+      properties:
+        region:
+          type: string
+        state:
+          type: string
+        soilType:
+          type: string
+        avgN:
+          type: number
+        avgP:
+          type: number
+        avgK:
+          type: number
+        avgPh:
+          type: number
+        commonCrops:
+          type: array
+          items:
+            type: string
+      required:
+        - region
+        - soilType
+        - avgN
+        - avgP
+        - avgK
+        - avgPh
+        - commonCrops
+
+    CropCalendarEntry:
+      type: object
+      properties:
+        crop:
+          type: string
+        season:
+          type: string
+        sowingMonths:
+          type: array
+          items:
+            type: string
+        harvestMonths:
+          type: array
+          items:
+            type: string
+        waterRequirement:
+          type: string
+        soilType:
+          type: string
+      required:
+        - crop
+        - season
+        - sowingMonths
+        - harvestMonths
+
+    CropCalendar:
+      type: object
+      properties:
+        region:
+          type: string
+        season:
+          type: string
+        entries:
+          type: array
+          items:
+            $ref: "#/components/schemas/CropCalendarEntry"
+        currentMonth:
+          type: string
+        recommendations:
+          type: array
+          items:
+            type: string
+      required:
+        - entries
+        - currentMonth
+
+    CropDetails:
+      type: object
+      properties:
+        name:
+          type: string
+        localNames:
+          type: object
+          additionalProperties:
+            type: string
+        description:
+          type: string
+        season:
+          type: string
+        duration:
+          type: string
+        soilRequirement:
+          type: string
+        waterRequirement:
+          type: string
+        fertilizers:
+          type: array
+          items:
+            type: string
+        diseases:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+              symptoms:
+                type: string
+              treatment:
+                type: string
+            required:
+              - name
+              - symptoms
+              - treatment
+        govtSchemes:
+          type: array
+          items:
+            type: string
+        marketPrice:
+          type: string
+        yieldPerAcre:
+          type: string
+      required:
+        - name
+        - description
+        - season
+        - duration

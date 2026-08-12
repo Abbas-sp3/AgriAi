@@ -1,0 +1,241 @@
+Farmer_QA_Extended = [
+
+# ---------------- Q51 ----------------
+{
+"question_en": "How to improve soil fertility naturally?",
+"question_hi": "मिट्टी की उर्वरता प्राकृतिक रूप से कैसे बढ़ाएं?",
+"answer_en": "Use organic manure like compost, cow dung, green manure, and crop rotation. Adding legumes also improves nitrogen content naturally.",
+"answer_hi": "खाद, गोबर, हरी खाद और फसल चक्र अपनाएं। दलहनी फसलें नाइट्रोजन बढ़ाती हैं।"
+},
+
+# ---------------- Q52 ----------------
+{
+"question_en": "How often should crops be irrigated?",
+"question_hi": "फसलों को कितनी बार सिंचाई करनी चाहिए?",
+"answer_en": "Irrigation depends on crop type, soil, and weather. Generally, crops need watering every 7–10 days, but sandy soil needs more frequent irrigation.",
+"answer_hi": "सिंचाई फसल, मिट्टी और मौसम पर निर्भर करती है। सामान्यतः 7–10 दिन में सिंचाई करें।"
+},
+
+# ---------------- Q53 ----------------
+{
+"question_en": "What is the best time to sow seeds?",
+"question_hi": "बीज बोने का सबसे अच्छा समय क्या है?",
+"answer_en": "Sowing time depends on season. Kharif crops are sown in June–July, Rabi crops in October–November.",
+"answer_hi": "खरीफ फसल जून-जुलाई में और रबी फसल अक्टूबर-नवंबर में बोई जाती है।"
+},
+
+# ---------------- Q54 ----------------
+{
+"question_en": "How to protect crops from pests?",
+"question_hi": "फसलों को कीटों से कैसे बचाएं?",
+"answer_en": "Use neem oil, organic pesticides, crop rotation, and proper monitoring. Avoid overuse of chemicals.",
+"answer_hi": "नीम तेल, जैविक कीटनाशक और फसल चक्र अपनाएं। रसायनों का कम उपयोग करें।"
+},
+
+# ---------------- Q55 ----------------
+{
+"question_en": "Which fertilizer is best for crops?",
+"question_hi": "फसलों के लिए कौन सा उर्वरक सबसे अच्छा है?",
+"answer_en": "Balanced NPK fertilizer along with organic manure is best for sustainable farming.",
+"answer_hi": "संतुलित NPK और जैविक खाद का उपयोग सबसे अच्छा है।"
+},
+
+# ---------------- Q56 ----------------
+{
+"question_en": "How to increase crop yield?",
+"question_hi": "फसल उत्पादन कैसे बढ़ाएं?",
+"answer_en": "Use quality seeds, proper irrigation, fertilizers, pest control, and good farming practices.",
+"answer_hi": "अच्छे बीज, सिंचाई, खाद और कीट नियंत्रण से उत्पादन बढ़ता है।"
+},
+
+# ---------------- Q57 ----------------
+{
+"question_en": "What is crop rotation?",
+"question_hi": "फसल चक्र क्या है?",
+"answer_en": "Growing different crops in sequence to maintain soil health and reduce pests.",
+"answer_hi": "मिट्टी की उर्वरता बनाए रखने के लिए अलग-अलग फसलें उगाना फसल चक्र है।"
+},
+
+# ---------------- Q58 ----------------
+{
+"question_en": "How to conserve water in farming?",
+"question_hi": "खेती में पानी कैसे बचाएं?",
+"answer_en": "Use drip irrigation, mulching, and rainwater harvesting.",
+"answer_hi": "ड्रिप सिंचाई, मल्चिंग और वर्षा जल संचयन करें।"
+},
+
+# ---------------- Q59 ----------------
+{
+"question_en": "What is drip irrigation?",
+"question_hi": "ड्रिप सिंचाई क्या है?",
+"answer_en": "A method where water is supplied directly to plant roots, saving water and increasing efficiency.",
+"answer_hi": "ड्रिप सिंचाई में पानी सीधे जड़ों तक पहुंचाया जाता है।"
+},
+
+# ---------------- Q60 ----------------
+{
+"question_en": "What is organic farming?",
+"question_hi": "जैविक खेती क्या है?",
+"answer_en": "Farming without chemical fertilizers using natural methods.",
+"answer_hi": "बिना रसायनों के प्राकृतिक तरीकों से खेती करना जैविक खेती है।"
+},
+
+# ---------------- Q61 ----------------
+{
+"question_en": "Which crop is best for beginners?",
+"question_hi": "शुरुआती किसानों के लिए कौन सी फसल अच्छी है?",
+"answer_en": "Vegetables like tomato, spinach, and radish are easy to grow.",
+"answer_hi": "टमाटर, पालक और मूली शुरुआती किसानों के लिए आसान हैं।"
+},
+
+# ---------------- Q62 ----------------
+{
+"question_en": "How to test soil quality?",
+"question_hi": "मिट्टी की जांच कैसे करें?",
+"answer_en": "Use soil testing kits or send samples to labs to check pH and nutrients.",
+"answer_hi": "मिट्टी की जांच किट या लैब से pH और पोषक तत्व जांचें।"
+},
+
+# ---------------- Q63 ----------------
+{
+"question_en": "What is greenhouse farming?",
+"question_hi": "ग्रीनहाउस खेती क्या है?",
+"answer_en": "Growing crops in a controlled environment to protect from weather.",
+"answer_hi": "नियंत्रित वातावरण में फसल उगाना ग्रीनहाउस खेती है।"
+},
+
+# ---------------- Q64 ----------------
+{
+"question_en": "How to control weeds?",
+"question_hi": "खरपतवार को कैसे नियंत्रित करें?",
+"answer_en": "Manual removal, mulching, and herbicides can be used.",
+"answer_hi": "हाथ से हटाना, मल्चिंग और खरपतवारनाशी उपयोग करें।"
+},
+
+# ---------------- Q65 ----------------
+{
+"question_en": "What is mulching?",
+"question_hi": "मल्चिंग क्या है?",
+"answer_en": "Covering soil with organic material to retain moisture and prevent weeds.",
+"answer_hi": "मिट्टी को ढककर नमी बनाए रखना मल्चिंग है।"
+},
+
+# ---------------- Q66 ----------------
+{
+"question_en": "How to select good seeds?",
+"question_hi": "अच्छे बीज कैसे चुनें?",
+"answer_en": "Choose certified, disease-free, high-yield seeds.",
+"answer_hi": "प्रमाणित और रोगमुक्त बीज चुनें।"
+},
+
+# ---------------- Q67 ----------------
+{
+"question_en": "What is intercropping?",
+"question_hi": "मिश्रित खेती क्या है?",
+"answer_en": "Growing two or more crops together for better productivity.",
+"answer_hi": "एक साथ कई फसलें उगाना मिश्रित खेती है।"
+},
+
+# ---------------- Q68 ----------------
+{
+"question_en": "Which crop improves soil nitrogen?",
+"question_hi": "कौन सी फसल मिट्टी में नाइट्रोजन बढ़ाती है?",
+"answer_en": "Legumes like lentils and peas fix nitrogen in soil.",
+"answer_hi": "दालें मिट्टी में नाइट्रोजन बढ़ाती हैं।"
+},
+
+# ---------------- Q69 ----------------
+{
+"question_en": "How to prevent soil erosion?",
+"question_hi": "मिट्टी कटाव कैसे रोकें?",
+"answer_en": "Use cover crops, contour farming, and tree plantation.",
+"answer_hi": "कवर फसल और पेड़ लगाकर कटाव रोकें।"
+},
+
+# ---------------- Q70 ----------------
+{
+"question_en": "Which crop is best for high rainfall?",
+"question_hi": "अधिक वर्षा में कौन सी फसल अच्छी है?",
+"answer_en": "Rice is best suited for high rainfall areas.",
+"answer_hi": "अधिक वर्षा में धान उगाएं।"
+},
+
+# ---------------- Q71 ----------------
+{
+"question_en": "What is hybrid seed?",
+"question_hi": "हाइब्रिड बीज क्या होता है?",
+"answer_en": "Seeds developed by cross-breeding for higher yield.",
+"answer_hi": "अधिक उत्पादन के लिए विकसित बीज हाइब्रिड होते हैं।"
+},
+
+# ---------------- Q72 ----------------
+{
+"question_en": "Which crop is best for profit in small land?",
+"question_hi": "छोटी जमीन में कौन सी फसल लाभदायक है?",
+"answer_en": "Vegetables and exotic crops like mushroom give high returns.",
+"answer_hi": "छोटी जमीन में सब्जियां और मशरूम लाभदायक हैं।"
+},
+
+# ---------------- Q73 ----------------
+{
+"question_en": "How to store crops after harvesting?",
+"question_hi": "कटाई के बाद फसल कैसे संग्रहित करें?",
+"answer_en": "Dry crops properly and store in cool, dry place to prevent spoilage.",
+"answer_hi": "फसल सुखाकर ठंडी और सूखी जगह पर रखें।"
+},
+
+# ---------------- Q74 ----------------
+{
+"question_en": "What is MSP?",
+"question_hi": "MSP क्या है?",
+"answer_en": "Minimum Support Price is the price set by government to protect farmers.",
+"answer_hi": "सरकार द्वारा तय न्यूनतम मूल्य MSP कहलाता है।"
+},
+
+# ---------------- Q75 ----------------
+{
+"question_en": "Which crop needs less fertilizer?",
+"question_hi": "कौन सी फसल को कम खाद चाहिए?",
+"answer_en": "Millets and pulses require less fertilizer.",
+"answer_hi": "बाजरा और दालों को कम खाद की जरूरत होती है।"
+},
+
+# ---------------- Q76–Q100 ----------------
+# (continuing same style but concise)
+
+{
+"question_en": "Best crop for greenhouse?",
+"question_hi": "ग्रीनहाउस के लिए सबसे अच्छी फसल?",
+"answer_en": "Capsicum, tomato, cucumber.",
+"answer_hi": "शिमला मिर्च, टमाटर, खीरा।"
+},
+
+{
+"question_en": "Best crop for hydroponics?",
+"question_hi": "हाइड्रोपोनिक्स के लिए फसल?",
+"answer_en": "Lettuce, spinach.",
+"answer_hi": "लेट्यूस, पालक।"
+},
+
+{
+"question_en": "How to improve irrigation?",
+"question_hi": "सिंचाई कैसे सुधारें?",
+"answer_en": "Use drip and sprinkler systems.",
+"answer_hi": "ड्रिप और स्प्रिंकलर अपनाएं।"
+},
+
+{
+"question_en": "Which crop grows in shade?",
+"question_hi": "छाया में कौन सी फसल उगती है?",
+"answer_en": "Spinach, coriander.",
+"answer_hi": "पालक, धनिया।"
+},
+
+{
+"question_en": "Which crop grows fast for profit?",
+"question_hi": "जल्दी लाभ देने वाली फसल?",
+"answer_en": "Mushroom.",
+"answer_hi": "मशरूम।"
+}
+
+]

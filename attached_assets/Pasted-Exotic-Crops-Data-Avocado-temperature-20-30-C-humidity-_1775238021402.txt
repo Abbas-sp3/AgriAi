@@ -1,0 +1,103 @@
+Exotic_Crops_Data = {
+
+"Avocado": {
+    "temperature": "20-30°C",
+    "humidity": "60-80%",
+    "rainfall": "1000-1500mm",
+    "soil_pH": "5.5-7",
+    "NPK": "Medium N, High K",
+    "states": ["Maharashtra", "Karnataka", "Tamil Nadu"],
+    "profit": "High"
+},
+
+"Dragon Fruit": {
+    "temperature": "25-35°C",
+    "humidity": "50-70%",
+    "rainfall": "500-1000mm",
+    "soil_pH": "5.5-7",
+    "NPK": "Low N, Medium P, High K",
+    "states": ["Gujarat", "Rajasthan", "Andhra Pradesh"],
+    "profit": "Very High"
+},
+
+"Kiwi": {
+    "temperature": "10-25°C",
+    "humidity": "70-85%",
+    "rainfall": "1200-1500mm",
+    "soil_pH": "5-6",
+    "NPK": "High N",
+    "states": ["Assam", "Himachal Pradesh"],
+    "profit": "High"
+},
+
+"Blueberry": {
+    "temperature": "15-25°C",
+    "humidity": "60-80%",
+    "rainfall": "800-1200mm",
+    "soil_pH": "4.5-5.5",
+    "NPK": "Low N",
+    "states": ["Karnataka"],
+    "profit": "Very High"
+},
+
+"Quinoa": {
+    "temperature": "15-30°C",
+    "humidity": "40-60%",
+    "rainfall": "300-600mm",
+    "soil_pH": "6-8",
+    "NPK": "Low N",
+    "states": ["Rajasthan", "MP"],
+    "profit": "High"
+},
+
+"Chia Seeds": {
+    "temperature": "20-30°C",
+    "humidity": "50-70%",
+    "rainfall": "500-800mm",
+    "soil_pH": "6-8",
+    "NPK": "Medium",
+    "states": ["Telangana", "MP"],
+    "profit": "High"
+},
+
+"Vanilla": {
+    "temperature": "21-32°C",
+    "humidity": "70-90%",
+    "rainfall": "1500-3000mm",
+    "soil_pH": "6-7",
+    "NPK": "High Organic",
+    "states": ["Kerala"],
+    "profit": "Very High"
+},
+
+"Stevia": {
+    "temperature": "20-30°C",
+    "humidity": "60-80%",
+    "rainfall": "600-1200mm",
+    "soil_pH": "6-7.5",
+    "NPK": "Low",
+    "states": ["MP", "Telangana"],
+    "profit": "High"
+},
+
+"Passion Fruit": {
+    "temperature": "20-30°C",
+    "humidity": "60-80%",
+    "rainfall": "800-1500mm",
+    "soil_pH": "5.5-6.5",
+    "NPK": "Medium",
+    "states": ["Maharashtra", "Assam"],
+    "profit": "High"
+},
+
+"Olive": {
+    "temperature": "15-30°C",
+    "humidity": "30-50%",
+    "rainfall": "400-700mm",
+    "soil_pH": "6-8",
+    "NPK": "Low",
+    "states": ["Rajasthan"],
+    "profit": "Medium"
+}
+
+}

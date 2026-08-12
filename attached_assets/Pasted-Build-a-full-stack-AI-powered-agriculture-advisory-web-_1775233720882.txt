@@ -1,0 +1,99 @@
+Build a full-stack AI-powered agriculture advisory web application called **SmartKisan AI**.
+
+Tech Stack:
+
+* Backend: Python Flask
+* Frontend: HTML, CSS, JavaScript (simple responsive UI)
+* Machine Learning: Scikit-learn (Random Forest model)
+* AI Chat: OpenAI API (or mock function if API key not provided)
+
+Project Requirements:
+
+1. Backend (Flask):
+
+* Create a Flask server with these endpoints:
+
+  a) `/predict` (POST):
+
+  * Input JSON: N, P, K, temperature, humidity, ph, rainfall
+  * Output: recommended crop using a trained RandomForest model
+  * Train the model using a dummy or sample crop dataset if dataset not provided
+
+  b) `/ask` (POST):
+
+  * Input JSON: query (farmer question), context (location, crop, season)
+  * Use OpenAI API (or a mock response function if API key missing)
+  * Return a simple, actionable farming answer
+
+  c) `/weather` (GET):
+
+  * Return mock weather data (temperature, humidity) OR integrate OpenWeather API
+
+2. AI Logic:
+
+* Build a helper file `ai_engine.py`
+* Function should take query + context and return a farmer-friendly answer
+* If API key is missing, return hardcoded realistic responses
+     
+3. Frontend:
+
+* Create a clean UI with:
+
+  * Input fields for soil data (N, P, K, pH, rainfall, temperature, humidity)
+  * Button: "Predict Crop"
+  * Chatbox UI:
+
+    * Input field for farmer question
+    * Button: "Ask AI"
+  * Display:
+
+    * Crop result
+    * AI response
+
+4. UI/UX:
+
+* Make it mobile-friendly
+* Use simple CSS (green agriculture theme)colours: green , blue 
+* Add loading indicator when calling API which looks alike leaf
+     keep the web page which is connected to nature mainlyy in looking.
+5. Integration:
+
+* Use fetch() in JavaScript to call Flask endpoints
+* Ensure frontend and backend connect correctly
+
+6. Bonus Features:
+
+* Add microphone button (basic voice input using Web Speech API)
+* Add file upload button (image upload placeholder)   
+     - News alerts related to Farmer schems , weather.
+7. Project Structure:
+
+* app.py
+* ai_engine.py
+* model.pkl (auto-generated)
+* templates/index.html
+* static/style.css
+* static/script.js
+
+8. Run Instructions:
+
+* Include instructions to run:
+  pip install flask pandas numpy scikit-learn openai
+  python app.py
+
+9. Ensure:
+
+* Code is clean and well-commented
+* Works without API key (fallback responses)
+* No errors on first run
+
+Goal:
+The app should allow farmers to:
+
+* Get crop recommendations based on soil & weather
+* Ask farming questions in natural language
+* Get instant AI-based advice
+     - Also answer query asked by farmer related to crop , which medicine to be provided, explain the schemes , when to yeild   
+Make the app simple, functional, and demo-ready for a hackathon
+first a fall fetch location using gps make the ask the expert multi lingual also always take news from reliable source like government sites and when ever the clicks on read more redirect it to the source also in calender whenever clicked on recommended crop give the details about the crop also ask the farmer whether he have taken soil analysis of the soil if yes ask to them it not then take the avergae of the region he is from and also fetch the soil type of the region
+if we are using voice or if we want the reply from bot in voice also in same 8 languages means we want the reply from bot in voice so that farmer can listen and reply himself also in latest updates the words are overlapping and the speed is very fast and integrate open meteo for weather pridiction

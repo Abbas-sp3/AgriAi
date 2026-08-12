@@ -1,0 +1,165 @@
+Farmer_QA = [
+
+# ---------------- Q1 ----------------
+{
+"question_en": "What crop is best for high nitrogen soil?",
+"question_hi": "उच्च नाइट्रोजन वाली मिट्टी के लिए कौन सी फसल सबसे अच्छी है?",
+"answer_en": "If soil nitrogen is high, grow crops that consume nitrogen efficiently like leafy vegetables (spinach, cabbage) and sugarcane. Avoid legumes because they increase nitrogen further.",
+"answer_hi": "यदि मिट्टी में नाइट्रोजन अधिक है, तो पालक, पत्तागोभी और गन्ना उगाएं। दलहनी फसलों से बचें क्योंकि वे नाइट्रोजन और बढ़ाती हैं।"
+},
+
+# ---------------- Q2 ----------------
+{
+"question_en": "Which crop is suitable for low rainfall areas?",
+"question_hi": "कम वर्षा वाले क्षेत्रों के लिए कौन सी फसल उपयुक्त है?",
+"answer_en": "Grow drought-resistant crops like bajra, jowar, and pulses. These crops require less water and survive dry conditions.",
+"answer_hi": "कम वर्षा में बाजरा, ज्वार और दालें उगाएं। ये कम पानी में भी अच्छी उपज देती हैं।"
+},
+
+# ---------------- Q3 ----------------
+{
+"question_en": "Which crop is best for acidic soil?",
+"question_hi": "अम्लीय मिट्टी के लिए कौन सी फसल सबसे अच्छी है?",
+"answer_en": "For acidic soil (pH < 6), crops like tea, pineapple, and potato perform well and give good yield.",
+"answer_hi": "अम्लीय मिट्टी (pH < 6) में चाय, अनानास और आलू अच्छी तरह उगते हैं।"
+},
+
+# ---------------- Q4 ----------------
+{
+"question_en": "Which crop is suitable for neutral soil?",
+"question_hi": "सामान्य pH वाली मिट्टी के लिए कौन सी फसल उपयुक्त है?",
+"answer_en": "Neutral soil is ideal for wheat, rice, maize, and most vegetables.",
+"answer_hi": "सामान्य pH वाली मिट्टी में गेहूं, चावल, मक्का और सब्जियां अच्छी उगती हैं।"
+},
+
+# ---------------- Q5 ----------------
+{
+"question_en": "Which crops need high potassium?",
+"question_hi": "कौन सी फसलें अधिक पोटैशियम मांगती हैं?",
+"answer_en": "Banana and potato need high potassium for better yield and disease resistance.",
+"answer_hi": "केला और आलू को अधिक पोटैशियम की आवश्यकता होती है।"
+},
+
+# ---------------- Q6 ----------------
+{
+"question_en": "Which crop is suitable for sandy soil?",
+"question_hi": "रेतीली मिट्टी के लिए कौन सी फसल उपयुक्त है?",
+"answer_en": "Groundnut and watermelon grow well due to good drainage in sandy soil.",
+"answer_hi": "रेतीली मिट्टी में मूंगफली और तरबूज अच्छी तरह उगते हैं।"
+},
+
+# ---------------- Q7 ----------------
+{
+"question_en": "Which crop grows in high humidity?",
+"question_hi": "उच्च आर्द्रता में कौन सी फसल उगती है?",
+"answer_en": "Rice grows best in high humidity and water-rich conditions.",
+"answer_hi": "उच्च आर्द्रता में धान सबसे अच्छी फसल है।"
+},
+
+# ---------------- Q8 ----------------
+{
+"question_en": "Which crop is best for summer?",
+"question_hi": "गर्मियों के लिए सबसे अच्छी फसल कौन सी है?",
+"answer_en": "Maize, cotton, cucumber, and watermelon are good summer crops.",
+"answer_hi": "गर्मियों में मक्का, कपास, खीरा और तरबूज उगाए जाते हैं।"
+},
+
+# ---------------- Q9 ----------------
+{
+"question_en": "Which crop is best for winter?",
+"question_hi": "सर्दियों के लिए सबसे अच्छी फसल कौन सी है?",
+"answer_en": "Wheat, mustard, peas, and barley are ideal winter crops.",
+"answer_hi": "सर्दियों में गेहूं, सरसों, मटर और जौ उगाए जाते हैं।"
+},
+
+# ---------------- Q10 ----------------
+{
+"question_en": "Which crop requires least water?",
+"question_hi": "कौन सी फसल को सबसे कम पानी की आवश्यकता होती है?",
+"answer_en": "Millets like bajra require very little water and are drought-resistant.",
+"answer_hi": "बाजरा जैसी फसलें बहुत कम पानी में उगती हैं।"
+},
+
+# ---------------- Q11 ----------------
+{
+"question_en": "Which is the best cash crop?",
+"question_hi": "सबसे अच्छी नकदी फसल कौन सी है?",
+"answer_en": "Cotton is a major cash crop with high market demand and export value.",
+"answer_hi": "कपास एक प्रमुख नकदी फसल है जिसकी बाजार में अधिक मांग है।"
+},
+
+# ---------------- Q12 ----------------
+{
+"question_en": "Which is the best fruit crop?",
+"question_hi": "सबसे अच्छी फल फसल कौन सी है?",
+"answer_en": "Mango is highly profitable and widely grown in India.",
+"answer_hi": "आम भारत की सबसे लाभदायक फल फसल है।"
+},
+
+# ---------------- Q13 ----------------
+{
+"question_en": "Which crop grows fastest?",
+"question_hi": "सबसे जल्दी बढ़ने वाली फसल कौन सी है?",
+"answer_en": "Spinach grows fast and can be harvested within 25–30 days.",
+"answer_hi": "पालक 25–30 दिनों में तैयार हो जाती है।"
+},
+
+# ---------------- Q14 ----------------
+{
+"question_en": "Which crop grows in alkaline soil?",
+"question_hi": "क्षारीय मिट्टी में कौन सी फसल उगती है?",
+"answer_en": "Barley and cotton tolerate alkaline soil conditions.",
+"answer_hi": "जौ और कपास क्षारीय मिट्टी में उगते हैं।"
+},
+
+# ---------------- Q15 ----------------
+{
+"question_en": "Which crop is best for clay soil?",
+"question_hi": "चिकनी मिट्टी के लिए कौन सी फसल अच्छी है?",
+"answer_en": "Rice grows well because clay soil retains water.",
+"answer_hi": "चिकनी मिट्टी में धान अच्छी तरह उगता है।"
+},
+
+# ---------------- Q16 ----------------
+{
+"question_en": "Which is the best fodder crop?",
+"question_hi": "पशुओं के लिए सबसे अच्छी चारा फसल कौन सी है?",
+"answer_en": "Napier grass is highly nutritious and fast-growing for cattle.",
+"answer_hi": "नेपियर घास पशुओं के लिए बहुत पौष्टिक होती है।"
+},
+
+# ---------------- Q17 ----------------
+{
+"question_en": "Which crop gives high profit?",
+"question_hi": "कौन सी फसल अधिक लाभ देती है?",
+"answer_en": "Dragon fruit gives high returns with low maintenance.",
+"answer_hi": "ड्रैगन फ्रूट कम लागत में अधिक लाभ देता है।"
+},
+
+# ---------------- Q18 ----------------
+{
+"question_en": "Which crops are best for organic farming?",
+"question_hi": "जैविक खेती के लिए कौन सी फसलें अच्छी हैं?",
+"answer_en": "Vegetables and pulses are best as they grow well without chemicals.",
+"answer_hi": "सब्जियां और दालें जैविक खेती के लिए उपयुक्त हैं।"
+},
+
+# ---------------- Q19 ----------------
+{
+"question_en": "Which crop is suitable for dry land?",
+"question_hi": "सूखी भूमि के लिए कौन सी फसल उपयुक्त है?",
+"answer_en": "Bajra and jowar are best for dry areas.",
+"answer_hi": "सूखे क्षेत्रों में बाजरा और ज्वार उगाएं।"
+},
+
+# ---------------- Q20 ----------------
+{
+"question_en": "Which crops are best for export?",
+"question_hi": "निर्यात के लिए कौन सी फसलें अच्छी हैं?",
+"answer_en": "Spices like turmeric, pepper, and cardamom have high export value.",
+"answer_hi": "हल्दी, काली मिर्च और इलायची जैसी फसलें निर्यात के लिए अच्छी हैं।"
+},
+
+# Continue similarly...
+
+]

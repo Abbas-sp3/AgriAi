@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "SmartKisan AI"
+version = "1.0.0"
+id = "artifacts/smartkisan"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18139
+
+[services.development]
+run = "pnpm --filter @workspace/smartkisan run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/smartkisan", "run", "build" ]
+publicDir = "artifacts/smartkisan/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18139"
+BASE_PATH = "/"

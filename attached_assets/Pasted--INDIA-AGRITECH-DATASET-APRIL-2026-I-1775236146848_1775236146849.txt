@@ -1,0 +1,409 @@
+# =========================
+# INDIA AGRITECH DATASET - APRIL 2026
+# =========================
+
+India_April_2026_Data = {
+
+"Punjab": {
+  "temperature": "30-38°C",
+  "humidity": "35-55%",
+  "rainfall": "30-50mm",
+  "normal_crops": [
+    "Wheat (harvesting stage)",
+    "Maize",
+    "Sugarcane",
+    "Barley",
+    "Mustard (late harvest)"
+  ],
+  "exotic_crops": [
+    "Broccoli",
+    "Lettuce",
+    "Zucchini",
+    "Bell Pepper (Capsicum)"
+  ]
+},
+
+"Haryana": {
+  "temperature": "30-39°C",
+  "humidity": "30-50%",
+  "rainfall": "25-45mm",
+  "normal_crops": [
+    "Wheat",
+    "Bajra",
+    "Cotton",
+    "Sugarcane",
+    "Pulses"
+  ],
+  "exotic_crops": [
+    "Zucchini",
+    "Cherry Tomato",
+    "Parsley"
+  ]
+},
+
+"Uttar Pradesh": {
+  "temperature": "32-40°C",
+  "humidity": "40-60%",
+  "rainfall": "20-40mm",
+  "normal_crops": [
+    "Rice (nursery stage)",
+    "Sugarcane",
+    "Maize",
+    "Pulses",
+    "Vegetables"
+  ],
+  "exotic_crops": [
+    "Strawberry",
+    "Baby Corn",
+    "Broccoli"
+  ]
+},
+
+"Rajasthan": {
+  "temperature": "35-42°C",
+  "humidity": "20-40%",
+  "rainfall": "5-20mm",
+  "normal_crops": [
+    "Millets (Bajra)",
+    "Moong",
+    "Guar",
+    "Sesame"
+  ],
+  "exotic_crops": [
+    "Dragon Fruit",
+    "Aloe Vera",
+    "Quinoa"
+  ]
+},
+
+"Madhya Pradesh": {
+  "temperature": "33-40°C",
+  "humidity": "30-50%",
+  "rainfall": "15-35mm",
+  "normal_crops": [
+    "Soybean (preparation)",
+    "Maize",
+    "Pulses",
+    "Wheat (harvest)"
+  ],
+  "exotic_crops": [
+    "Quinoa",
+    "Chia Seeds",
+    "Stevia"
+  ]
+},
+
+"Maharashtra": {
+  "temperature": "32-38°C",
+  "humidity": "50-70%",
+  "rainfall": "20-60mm",
+  "normal_crops": [
+    "Cotton",
+    "Soybean",
+    "Sugarcane",
+    "Pulses",
+    "Groundnut"
+  ],
+  "exotic_crops": [
+    "Avocado",
+    "Dragon Fruit",
+    "Passion Fruit"
+  ]
+},
+
+"Gujarat": {
+  "temperature": "34-40°C",
+  "humidity": "40-65%",
+  "rainfall": "10-30mm",
+  "normal_crops": [
+    "Groundnut",
+    "Cotton",
+    "Bajra",
+    "Wheat (harvest)"
+  ],
+  "exotic_crops": [
+    "Dragon Fruit",
+    "Date Palm",
+    "Olive"
+  ]
+},
+
+"Karnataka": {
+  "temperature": "28-35°C",
+  "humidity": "50-75%",
+  "rainfall": "40-80mm",
+  "normal_crops": [
+    "Ragi",
+    "Maize",
+    "Pulses",
+    "Groundnut"
+  ],
+  "exotic_crops": [
+    "Blueberry",
+    "Avocado",
+    "Dragon Fruit"
+  ]
+},
+
+"Tamil Nadu": {
+  "temperature": "30-36°C",
+  "humidity": "55-75%",
+  "rainfall": "20-50mm",
+  "normal_crops": [
+    "Rice",
+    "Groundnut",
+    "Banana",
+    "Sugarcane"
+  ],
+  "exotic_crops": [
+    "Dragon Fruit",
+    "Papaya Hybrid",
+    "Moringa (export variety)"
+  ]
+},
+
+"Kerala": {
+  "temperature": "28-34°C",
+  "humidity": "65-85%",
+  "rainfall": "80-150mm",
+  "normal_crops": [
+    "Rice",
+    "Coconut",
+    "Black Pepper",
+    "Cardamom"
+  ],
+  "exotic_crops": [
+    "Vanilla",
+    "Nutmeg",
+    "Cocoa"
+  ]
+},
+
+"West Bengal": {
+  "temperature": "30-36°C",
+  "humidity": "60-80%",
+  "rainfall": "50-100mm",
+  "normal_crops": [
+    "Rice",
+    "Jute",
+    "Vegetables",
+    "Pulses"
+  ],
+  "exotic_crops": [
+    "Dragon Fruit",
+    "Mushroom",
+    "Baby Corn"
+  ]
+},
+
+"Bihar": {
+  "temperature": "32-38°C",
+  "humidity": "50-70%",
+  "rainfall": "30-70mm",
+  "normal_crops": [
+    "Rice nursery",
+    "Maize",
+    "Pulses",
+    "Vegetables"
+  ],
+  "exotic_crops": [
+    "Mushroom",
+    "Strawberry",
+    "Baby Corn"
+  ]
+},
+
+"Odisha": {
+  "temperature": "30-36°C",
+  "humidity": "60-80%",
+  "rainfall": "60-120mm",
+  "normal_crops": [
+    "Rice",
+    "Pulses",
+    "Groundnut",
+    "Vegetables"
+  ],
+  "exotic_crops": [
+    "Cashew",
+    "Dragon Fruit",
+    "Papaya Hybrid"
+  ]
+},
+
+"Assam": {
+  "temperature": "25-32°C",
+  "humidity": "70-90%",
+  "rainfall": "150-250mm",
+  "normal_crops": [
+    "Tea",
+    "Rice",
+    "Mustard",
+    "Vegetables"
+  ],
+  "exotic_crops": [
+    "Kiwi",
+    "Passion Fruit",
+    "Dragon Fruit"
+  ]
+},
+
+"Telangana": {
+  "temperature": "32-38°C",
+  "humidity": "40-65%",
+  "rainfall": "20-50mm",
+  "normal_crops": [
+    "Cotton",
+    "Maize",
+    "Pulses",
+    "Groundnut"
+  ],
+  "exotic_crops": [
+    "Chia Seeds",
+    "Stevia",
+    "Dragon Fruit"
+  ]
+},
+
+"Andhra Pradesh": {
+  "temperature": "30-36°C",
+  "humidity": "55-75%",
+  "rainfall": "30-60mm",
+  "normal_crops": [
+    "Rice",
+    "Groundnut",
+    "Sugarcane",
+    "Pulses"
+  ],
+  "exotic_crops": [
+    "Dragon Fruit",
+    "Papaya Hybrid",
+    "Banana Export Variety"
+  ]
+}
+
+}
+
+# =========================
+# SOIL-BASED CROP RECOMMENDATION
+# =========================
+
+Soil_Recommendation = {
+
+"Nitrogen": {
+  "Low (<50 kg/ha)": [
+    "Lentils",
+    "Peas",
+    "Groundnut",
+    "Chickpea"
+  ],
+  "Medium (50-100 kg/ha)": [
+    "Wheat",
+    "Rice",
+    "Maize"
+  ],
+  "High (>100 kg/ha)": [
+    "Sugarcane",
+    "Spinach",
+    "Cabbage",
+    "Leafy Vegetables"
+  ]
+},
+
+"Phosphorus": {
+  "Low (<30 kg/ha)": [
+    "Maize",
+    "Pulses",
+    "Groundnut"
+  ],
+  "Medium (30-60 kg/ha)": [
+    "Wheat",
+    "Rice"
+  ],
+  "High (>60 kg/ha)": [
+    "Sunflower",
+    "Soybean",
+    "Mustard"
+  ]
+},
+
+"Potassium": {
+  "Low (<120 kg/ha)": [
+    "Potato",
+    "Banana"
+  ],
+  "Medium (120-250 kg/ha)": [
+    "Wheat",
+    "Rice",
+    "Maize"
+  ],
+  "High (>250 kg/ha)": [
+    "Coconut",
+    "Sugarcane"
+  ]
+},
+
+"pH": {
+  "Acidic (<6)": [
+    "Tea",
+    "Pineapple",
+    "Potato"
+  ],
+  "Neutral (6-7.5)": [
+    "Wheat",
+    "Rice",
+    "Maize",
+    "Vegetables"
+  ],
+  "Alkaline (>7.5)": [
+    "Barley",
+    "Cotton",
+    "Mustard"
+  ]
+}
+
+}
+
+# =========================
+# SMART CROP RECOMMENDATION FUNCTION
+# =========================
+
+def recommend_crop(N, P, K, pH):
+    if 50 <= N <= 100 and 30 <= P <= 60 and 120 <= K <= 250 and 6 <= pH <= 7.5:
+        return "Rice or Wheat (Highly Suitable)"
+    elif N < 50:
+        return "Legumes (Improve Nitrogen)"
+    elif pH < 6:
+        return "Tea / Pineapple"
+    elif pH > 7.5:
+        return "Cotton / Barley"
+    else:
+        return "Maize / Pulses (Moderate Suitability)"
+
+# =========================
+# EXOTIC CROPS MASTER LIST
+# =========================
+
+Exotic_Crops = [
+"Avocado",
+"Dragon Fruit",
+"Kiwi",
+"Blueberry",
+"Quinoa",
+"Chia Seeds",
+"Zucchini",
+"Broccoli",
+"Lettuce",
+"Parsley",
+"Vanilla",
+"Stevia",
+"Passion Fruit",
+"Cocoa",
+"Olive",
+"Date Palm"
+]
+
+# =========================
+# SAMPLE TEST
+# =========================
+
+print(recommend_crop(80, 40, 150, 6.8))
