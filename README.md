@@ -19,7 +19,7 @@
 
 <br/>
 
-[🚀 Features](#-key-features) · [🏗️ Architecture](#️-architecture) · [⚡ Quick Start](#-quick-start) · [📡 API Reference](#-api-reference) · [🌐 Languages](#-supported-languages) · [🤝 Contributing](#-contributing)
+[🚀 Features](#-key-features) · [🏗️ Architecture](#-architecture) · [⚡ Quick Start](#-quick-start) · [📡 API Reference](#-api-reference) · [🌐 Languages](#-supported-languages) · [🤝 Contributing](#-contributing)
 
 </div>
 
@@ -125,30 +125,30 @@ India has over **146 million farming households**, yet access to quality agricul
 ### Disease Detection Pipeline
 
 ```
-📷 Camera (getUserMedia)         🖼️ File Upload (fallback)
-         │                                │
-         └──────────────┬─────────────────┘
-                        ▼
-              Canvas resize (max 1024px)
-                        │
-                        ▼
-              Base64 encoding
-                        │
-                        ▼
-              POST /api/disease/detect
-                        │
-                        ▼
-         GPT-4.1-mini Vision Model
-                        │
-                        ▼
-    ┌───────────────────────────────────┐
-    │ • Disease Name & Confidence Score │
-    │ • Severity Level                  │
-    │ • Root Causes                     │
-    │ • Treatment Steps                 │
-    │ • Prevention Methods              │
-    │ • Estimated Yield Impact          │
-    └───────────────────────────────────┘
+📷 Camera (getUserMedia)        🖼️ File Upload (fallback)
+         │                               │
+         └─────────────┬─────────────────┘
+                       ▼
+             Canvas resize (max 1024px)
+                       │
+                       ▼
+             Base64 encoding
+                       │
+                       ▼
+             POST /api/disease/detect
+                       │
+                       ▼
+        GPT-4.1-mini Vision Model
+                       │
+                       ▼
+   ┌──────────────────────────────────┐
+   │ • Disease Name & Confidence Score│
+   │ • Severity Level                 │
+   │ • Root Causes                    │
+   │ • Treatment Steps                │
+   │ • Prevention Methods             │
+   │ • Estimated Yield Impact         │
+   └──────────────────────────────────┘
 ```
 
 ---
@@ -221,58 +221,146 @@ India has over **146 million farming households**, yet access to quality agricul
 
 ### Prerequisites
 
-- **Node.js** 20+
-- **pnpm** 10+ (`npm install -g pnpm`)
-- **PostgreSQL** 16+ (or a connection URL)
-- **OpenAI API Key**
+Before you begin, ensure you have the following installed:
 
-### 1. Clone the Repository
+| Requirement | Version | Install |
+|-------------|---------|---------|
+| Node.js | 20+ | https://nodejs.org |
+| pnpm | 10+ | `npm install -g pnpm` |
+| PostgreSQL | 16+ | https://postgresql.org |
+| Git | any | https://git-scm.com |
+
+You will also need an **OpenAI API Key** from https://platform.openai.com
+
+---
+
+### Step 1 — Clone the Repository
 
 ```bash
 git clone https://github.com/Abbas-sp3/AgriAi.git
 cd AgriAi
 ```
 
-### 2. Install Dependencies
+---
+
+### Step 2 — Install Dependencies
 
 ```bash
 pnpm install
 ```
 
-### 3. Configure Environment Variables
+> This installs all packages across the monorepo (frontend + backend + shared libs).  
+> On first run this may take 1–2 minutes.
+
+---
+
+### Step 3 — Configure Environment Variables
+
+Copy the example env file for the API server:
 
 ```bash
 cp artifacts/api-server/.env.example artifacts/api-server/.env
 ```
 
-Edit `artifacts/api-server/.env`:
+Then open `artifacts/api-server/.env` and fill in your values:
 
 ```env
-# Required
-OPENAI_API_KEY=sk-...your-key-here...
-DATABASE_URL=postgresql://user:password@localhost:5432/smartkisan
+# ─── Required ──────────────────────────────────────
+OPENAI_API_KEY=sk-proj-...your-openai-key-here...
+DATABASE_URL=postgresql://postgres:password@localhost:5432/smartkisan
 
-# Optional
+# ─── Optional (defaults shown) ─────────────────────
 NODE_ENV=development
 PORT=3000
 LOG_LEVEL=info
 ```
 
-### 4. Run Development Servers
+> **Getting your OpenAI API Key:**  
+> Go to https://platform.openai.com/api-keys → Create new secret key
+
+> **Database setup:**  
+> Create a PostgreSQL database named `smartkisan`:
+> ```sql
+> CREATE DATABASE smartkisan;
+> ```
+
+---
+
+### Step 4 — Run the Development Servers
 
 ```bash
 pnpm run dev
 ```
 
-This starts both servers concurrently:
-- 🌐 **Frontend** → http://localhost:5173
-- 🔴 **API Server** → http://localhost:3000
+This starts **both servers simultaneously**:
 
-### 5. Build for Production
+| Service | URL | Description |
+|---------|-----|-------------|
+| 🌐 Web App (SmartKisan) | http://localhost:5173 | React frontend |
+| 🔴 API Server | http://localhost:3000 | Express backend |
+
+**Open your browser at: http://localhost:5173**
+
+---
+
+### Step 5 — (Optional) Build for Production
 
 ```bash
 pnpm run build
 ```
+
+---
+
+## 🔧 Running Individual Services
+
+If you want to run services separately:
+
+```bash
+# Run only the frontend (Vite dev server)
+pnpm --filter @workspace/smartkisan run dev
+
+# Run only the API server
+pnpm --filter @workspace/api-server run dev
+
+# Type-check all packages
+pnpm run typecheck
+```
+
+---
+
+## 🐛 Troubleshooting
+
+### Port already in use
+
+```bash
+# Find what's using port 3000 or 5173
+netstat -ano | findstr :3000
+# Kill the process (replace PID with the actual number)
+taskkill /PID <PID> /F
+```
+
+### pnpm install fails with permission error
+
+```bash
+# Run with CI mode to bypass TTY prompts
+$env:CI="true"; pnpm install   # Windows PowerShell
+CI=true pnpm install           # Mac/Linux
+```
+
+### Cannot connect to database
+
+Make sure PostgreSQL is running and the `DATABASE_URL` in your `.env` is correct:
+
+```bash
+# Test connection (PostgreSQL must be running)
+psql -U postgres -c "\l"
+```
+
+### OpenAI API errors
+
+- Verify your `OPENAI_API_KEY` is valid and has credits
+- Check the key starts with `sk-proj-` or `sk-`
+- Ensure your account has access to `gpt-4.1-mini` and Vision models
 
 ---
 
@@ -307,7 +395,7 @@ Base URL: `http://localhost:3000/api`
 | `POST` | `/agent/transcribe` | Speech-to-text conversion |
 | `POST` | `/agent/tts` | Text-to-speech synthesis |
 
-### Example — Disease Detection Request
+### Example — Disease Detection
 
 ```bash
 curl -X POST http://localhost:3000/api/disease/detect \
@@ -342,83 +430,38 @@ AgriAi/
 │   │   ├── src/
 │   │   │   ├── routes/
 │   │   │   │   ├── advisor.ts   # Crop advisory endpoints
-│   │   │   │   ├── disease.ts   # Disease detection endpoint
+│   │   │   │   ├── disease.ts   # Disease detection
 │   │   │   │   └── agent.ts     # Voice agent endpoints
 │   │   │   ├── lib/
 │   │   │   │   ├── aiEngine.ts  # OpenAI integration
 │   │   │   │   ├── weatherService.ts
 │   │   │   │   └── translator.ts
-│   │   │   └── index.ts         # Server entry point
-│   │   ├── .env.example
+│   │   │   └── index.ts
+│   │   ├── .env.example         # ← Copy this to .env
 │   │   └── package.json
 │   │
 │   └── smartkisan/              # React frontend
 │       ├── src/
-│       │   ├── components/      # Reusable UI components
-│       │   │   └── voice-agent.tsx
+│       │   ├── components/      # UI components
 │       │   ├── pages/           # Route pages
-│       │   │   ├── advisor.tsx
-│       │   │   ├── calendar.tsx
-│       │   │   └── ...
-│       │   └── lib/
-│       │       ├── date-locale.ts
-│       │       └── weather-locales.ts
+│       │   └── lib/             # Utilities & i18n
 │       └── package.json
 │
 ├── lib/                         # Shared workspace libraries
-│   ├── api-spec/                # API type definitions
+│   ├── api-spec/                # OpenAPI spec
 │   ├── api-zod/                 # Zod schemas
-│   ├── db/                      # Database schema & queries
-│   └── integrations-openai-*/   # OpenAI integration modules
+│   ├── db/                      # Database schema
+│   └── integrations-openai-*/   # OpenAI modules
 │
-├── scripts/                     # Build & dev scripts
-├── package.json                 # Workspace root
+├── scripts/
+├── package.json                 # Workspace root (run pnpm dev here)
 ├── pnpm-workspace.yaml
 └── README.md
 ```
 
 ---
 
-## 🔧 Development Guide
-
-### Running Individual Packages
-
-```bash
-# Run only the frontend
-pnpm --filter @workspace/smartkisan run dev
-
-# Run only the API server
-pnpm --filter @workspace/api-server run dev
-
-# Type-check all packages
-pnpm run typecheck
-```
-
-### Environment Variables Reference
-
-| Variable | Required | Default | Description |
-|----------|----------|---------|-------------|
-| `OPENAI_API_KEY` | ✅ | — | OpenAI API key |
-| `DATABASE_URL` | ✅ | — | PostgreSQL connection string |
-| `PORT` | ❌ | `3000` | API server port |
-| `NODE_ENV` | ❌ | `development` | Environment |
-| `LOG_LEVEL` | ❌ | `info` | Pino log level |
-
----
-
-## 🚀 Deployment
-
-### Replit (Recommended)
-
-This project is pre-configured for Replit deployment via `.replit` config:
-
-1. Import the repository on Replit
-2. Set `OPENAI_API_KEY` and `DATABASE_URL` as Secrets
-3. Click **Run**
-
----
-
-## 🧠 How It Works — End-to-End Flow
+## 🧠 How It Works
 
 ```
 1. 🎙️  Farmer speaks / types in local language
@@ -492,15 +535,15 @@ Every design decision prioritizes low-literacy users, low-end devices, and inter
 
 We follow [Conventional Commits](https://www.conventionalcommits.org/):
 
-```
-feat:     New feature
-fix:      Bug fix
-docs:     Documentation changes
-style:    Code style changes
-refactor: Code refactoring
-test:     Adding tests
-chore:    Build/tooling changes
-```
+| Prefix | Use for |
+|--------|---------|
+| `feat:` | New feature |
+| `fix:` | Bug fix |
+| `docs:` | Documentation changes |
+| `style:` | Code style changes |
+| `refactor:` | Code refactoring |
+| `test:` | Adding tests |
+| `chore:` | Build/tooling changes |
 
 ---
 
@@ -517,8 +560,8 @@ chore:    Build/tooling changes
 
 ## 🏆 Hackathon
 
-**Event:** BharatTech Xperience 3.0  
-**Track:** AgriTech / AI for Social Good  
+**Event:** BharatTech Xperience 3.0
+**Track:** AgriTech / AI for Social Good
 **Theme:** Empowering Bharat through Technology
 
 ---
@@ -532,7 +575,7 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 ## 🙏 Acknowledgements
 
 - [OpenAI](https://openai.com) — GPT-4.1-mini & Vision API
-- [Open-Meteo](https://open-meteo.com) — Free weather API
+- [Open-Meteo](https://open-meteo.com) — Free weather API (no key needed)
 - [shadcn/ui](https://ui.shadcn.com) — Beautiful component library
 - Government of India — Agricultural datasets and scheme data
 
